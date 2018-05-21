@@ -18,7 +18,7 @@ export default {
             },
             end: {
                 type: Number,
-                required: !0
+                default: 2018
             },
             decimal: {
                 type: Number,
@@ -37,10 +37,10 @@ export default {
   },
   methods:{
     initCountUp(){
-      this.numAnim = new CountUp(this.$refs.countup, this.startValue,
-                        this.endValue,
-                        this.decimalValue,
-                        this.durationValue,
+      this.numAnim = new CountUp(this.$refs.countup, this.start,
+                        this.end,
+                        this.decimal,
+                        this.duration,
                         this.options
                 );
       this.numAnim.start();
